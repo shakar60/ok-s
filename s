@@ -125,6 +125,18 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end,
 })
 
+local Input = 2Tab:CreateInput({
+Name = "Walkspeed Input",
+PlaceholderText = "Your input...",
+NumbersOnly = true, -- If the user can only type numbers. Remove or set to false if none.
+CharacterLimit = false, --max character limit. Remove or set to false
+OnEnter = true, -- Will callback only if the user pressed ENTER while being focused on the the box.
+RemoveTextAfterFocusLost = false, -- Speaks for itself.
+Callback = function(Text)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end,
+})
+
 local Slider = 2Tab:CreateSlider({
 Name = "FOV",
 Range = {0, 120},
@@ -137,6 +149,17 @@ workspace.CurrentCamera.FieldOfView = s
 end,
 })
 
+local Input = 2Tab:CreateInput({
+Name = "FOV",
+PlaceholderText = "Your input...",
+NumbersOnly = true, -- If the user can only type numbers. Remove or set to false if none.
+CharacterLimit = false, --max character limit. Remove or set to false
+OnEnter = true, -- Will callback only if the user pressed ENTER while being focused on the the box.
+RemoveTextAfterFocusLost = false, -- Speaks for itself.
+Callback = function(Text)
+workspace.CurrentCamera.FieldOfView = s
+end,
+})
 
 local Slider = 2Tab:CreateSlider({
 Name = "Jump Power Slider",
@@ -146,6 +169,18 @@ Suffix = "JP",
 CurrentValue = 16,
 Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 Callback = function(Value)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end,
+})
+
+local Input = 2Tab:CreateInput({
+Name = "Jump Power",
+PlaceholderText = "Your input...",
+NumbersOnly = true, -- If the user can only type numbers. Remove or set to false if none.
+CharacterLimit = false, --max character limit. Remove or set to false
+OnEnter = true, -- Will callback only if the user pressed ENTER while being focused on the the box.
+RemoveTextAfterFocusLost = false, -- Speaks for itself.
+Callback = function(Text)
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end,
 })
