@@ -184,29 +184,3 @@ Callback = function(Text)
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end,
 })
-
---Toggle
-local ToggleGui = Instance.new("ScreenGui")
-local Toggle = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-
---Properties
-ToggleGui.Name = "Toggle Gui"
-ToggleGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ToggleGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ToggleGui.ResetOnSpawn = false
-
-UICorner.Parent = Toggle
-Toggle.Name = "Toggle"
-Toggle.Parent = ToggleGui
-Toggle.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
-Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)--position of the toggle
-Toggle.Size = UDim2.new(0, 80, 0, 38)--size of the toggle
-Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "Open/Close"--name of the toggle
-Toggle.TextColor3 = Color3.fromRGB(203, 122, 49)
-Toggle.TextSize = 19.000
-Toggle.Draggable = true
-Toggle.MouseButton1Click:connect(function()
-Library:ToggleUI()
-end)
