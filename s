@@ -39,51 +39,7 @@ local Window = ArrayField:CreateWindow({
     }
  })
 
- --Notify
-
---1st Notify
-
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
-local Notify = AkaliNotif.Notify;
-Notify({
-Description = "Join Discord https://discord.gg/UhceAu7y";
-Title = "shakars hub Loaded";
-Duration = 5;
-});
-
---2nd Notify
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "shakars hub Loaded"; 
-Text = "Made by shakar#6955 and karvine"; 
-Duration = 5; 
-})
-
-game.StarterGui:SetCore("SendNotification", {
-Title = "Join discord"; 
-Text = "https://discord.gg/UhceAu7y"; 
-Duration = 10; 
-})
-
---3rd Notify
-
-local NotificationBindable = Instance.new("BindableFunction")
-
-function NotificationBindable.OnInvoke(buttonPressed)
-    if buttonPressed == "Yeah" then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AnthonyIsntHere/anthonysrepository/main/scripts/AntiChatLogger.lua"))()
-    elseif buttonPressed == "Nah im good" then
-        -- Do something when the Nah im good button is pressed
-    end
-end
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Do You Want Anti Ban Script?",
-    Text = "Loads Anti Ban Script",
-    Button1 = "Yeah",
-    Button2 = "Nah im good",
-    Callback = NotificationBindable
-})
+ 
 
 Window:Prompt({
     Title = 'USH HUB',
@@ -184,3 +140,4 @@ local Slider = 2Tab:CreateSlider({
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end,
  })
+
